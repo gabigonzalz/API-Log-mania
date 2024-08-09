@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Logs</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Logs</h1>
+    <div class="filter-buttons">
+        <a href="/logs">
+            <button>Sin filtro</button>
+        </a>
+        <a href="/logs/timestamp">
+            <button>Filtrar por Timestamp</button>
+        </a>
+        <a href="/logs/received">
+            <button>Filtrar por Received At</button>
+        </a>
+        <a href="/logs/levelname">
+            <button>Filtrar por Levelname</button>
+        </a>
+        <a href="/logs/message">
+            <button>Filtrar por Message</button>
+        </a>
+    </div>
+    <table class="logs-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Timestamp</th>
+                <th>Name</th>
+                <th>Level</th>
+                <th>Message</th>
+                <th>Received</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+                <tr>
+                    <td>{{ log['id'] }}</td>
+                    <td>{{ log['timestamp'] }}</td>
+                    <td>{{ log['name'] }}</td>
+                    <td>{{ log['levelname'] }}</td>
+                    <td>{{ log['message'] }}</td>
+                    <td>{{ log['received'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

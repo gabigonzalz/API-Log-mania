@@ -1,0 +1,81 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+    color: #008000; /* Dark Green */
+}
+
+body {
+    background-color: #000; /* Black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Ensure no margin */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    width: 90%; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    background-color: #111; /* Optional: Slightly lighter background for container */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounded corners for container */
+}
+
+h1 {
+    color: #32CD32; /* Lighter green for titles */
+    text-align: center;
+    margin-bottom: 20px; /* Space between title and buttons */
+}
+
+.filter-buttons {
+    margin-bottom: 20px; /* Space between buttons and table */
+    text-align: center; /* Center align buttons */
+}
+
+.filter-buttons a {
+    margin: 5px; /* Space between buttons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+button {
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #32CD32; /* Lighter green on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #008000; /* Green border */
+}
+
+th, td {
+    border: 1px solid #008000; /* Green border */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(0, 128, 0, 0.2); /* Lighter green */
+}
+
+tr:hover {
+    background-color: rgba(0, 128, 0, 0.1); /* Even lighter green */
+}
